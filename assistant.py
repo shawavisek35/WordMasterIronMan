@@ -12,7 +12,7 @@ voices = engine.getProperty('voices')#getting voice
 
 engine.setProperty('voice',voices[0].id)#setting the male voice of david for use
 engine.setProperty('rate',150)
-#print(voices[1].id)
+
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
