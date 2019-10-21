@@ -23,7 +23,7 @@ def takeCommand():
     
     with sr.Microphone() as source:
         print("Listening.............")
-        r.pause_threshold = 1
+        #r.pause_threshold = 1
         
         audio = r.listen(source)
 
@@ -32,7 +32,7 @@ def takeCommand():
             query = r.recognize_google(audio, language="en-in")
             print(f"you said.......{query}\n")
         except Exception as e:
-            print(f"say {e} that again please........")
+            print(f"say that again please........{e}")
             return "None"
         return query
 
